@@ -11,3 +11,7 @@ spec:
     operator: "Equal"
     value: "blue"
     effect: "NoSchedule"
+
+# Taint-> NODE
+# Toleration -> PODS    
+# NoSchedule, PreferNoSchedule, NoExecute
