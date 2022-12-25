@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+      - containerPort: 8080
+    nodeName: #이 부분이 없으면 pending으로 지속됨, 이렇게 넣어두면 scheduler가 알아서 넣어줌
