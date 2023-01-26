@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: usually-monitoring-daemon
+spec:
+  selector:
+    matachLabels:
+      app: example-agent
+  template: #similar like rs
+    metadata:
+      labels:
+        app: example-agent
+    spec:
+      containers:
+      - name: example-agent
+        image: example-agent

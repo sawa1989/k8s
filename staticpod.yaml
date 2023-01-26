@@ -1,0 +1,3 @@
+# --pod-manifest-path=/etc/kubernetes/manifests
+# --config=kubeconfig.yaml (staticPodPath)
+# kubeapi server is not existed, I should use docker ps

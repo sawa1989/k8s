@@ -1,0 +1,10 @@
+#ExecStart=/usr/local/bin/kube-scheduler \\
+# --config=/etc/kubernetes/config/shceduler-config-ex.yaml
+apiVersion: kubescheduler.config.k8s.io/v1
+kind: KubeSchedulerConfiguration
+profiles:
+- schedulerName: ex-scheduler
+leaderElection:
+  leadeerElect: true
+  resourceNamespace: kube-system
+  resourceName: lock-object-ex-scheduler # 여러개 스케쥴러 중에 하나만 선택하게 하기위해서 사용 
